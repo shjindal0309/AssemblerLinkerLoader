@@ -1,0 +1,13 @@
+#0           JMP  var1
+#3           DC 4
+#4    var1   JMP  var2
+#7           DC 2
+#8    var2   JMP  var3
+#11          DC 0
+#12   var3   LDA 3
+#15          STA 11
+#18          LDA 7
+#21          STA 3
+#24          LDA 11
+#27          STA 7
+#30          HLT

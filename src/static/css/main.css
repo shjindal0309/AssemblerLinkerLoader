@@ -1,0 +1,33 @@
+body {
+	background-color: #f0f0f0;
+}
+#symbolTable , #literalTable {
+	overflow: auto;
+}
+
+.code_tab {
+	/* background-color: #eee; */
+	cursor: pointer;
+}
+.code_tab.checked {
+	/* background-color: #fff; */
+	border-bottom: 2px solid green;
+}
+.code {
+	font-family:'Ubuntu Mono';
+	font-size:16px;
+	display: none;
+}
+.code#pass1code {
+	display: block;
+}
+
+
+#simulationResult {
+	display: none;
+}
+
+.table.table-bordered * {
+	text-align: center;
+	padding: 0px;
+}

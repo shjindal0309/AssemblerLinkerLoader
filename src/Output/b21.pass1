@@ -1,0 +1,51 @@
+#0           JMP  var1
+#4    var1   JMP  var2
+#8    var2   PUSH D
+#9           MVI E, 2
+#11   loop1  LDA 7
+#14          ADI 1
+#16          STA 7
+#19          MOV A, E
+#20          SUI 1
+#22          MOV E, A
+#23          JNZ  loop1
+#26          POP D
+#27          JMP  var3
+#31   var3   JMP  var4
+#35   var4   JMP  var5
+#39   var5   PUSH D
+#40          MVI E, 4
+#42   loop2  LDA 34
+#45          MOV B, A
+#46          LDA externc
+#49          SUB B
+#50          JP  if1
+#53          JZ  if1
+#56          MVI A, 9
+#58          STA 38
+#61   if1    LDA 34
+#64          ADI 1
+#66          STA 34
+#69          MOV A, E
+#70          SUI 1
+#72          MOV E, A
+#73          JNZ  loop2
+#76          POP D
+#77          LDA externe
+#80          STA 30
+#83          PUSH D
+#84          MVI E, 3
+#86   loop3  LDA 30
+#89          ADI 1
+#91          STA 30
+#94          MOV A, E
+#95          SUI 1
+#97          MOV E, A
+#98          JNZ  loop3
+#101         POP D
+#102         HLT
+#103  c      DC 6
+#104  e      DC 13
+#105  d      DC 2
+#106  a      DC 1
+#107  b      DC 5

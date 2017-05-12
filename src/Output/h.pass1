@@ -1,0 +1,25 @@
+#0           JMP  var1
+#3    d      DC 2
+#4    var1   JMP  var2
+#7    a      DC 1
+#8    var2   JMP  var3
+#11   b      DC 5
+#12   var3   PUSH D
+#13          MVI E, 4
+#15   loop1  LDA 7
+#18          MOV B, A
+#19          LDA 3
+#22          SUB B
+#23          JP  if1
+#26          JZ  if1
+#29          MVI A, 9
+#31          STA 11
+#34   if1    LDA 7
+#37          ADI 1
+#39          STA 7
+#42          MOV A, E
+#43          SUI 1
+#45          MOV E, A
+#46          JNZ  loop1
+#49          POP D
+#50          HLT

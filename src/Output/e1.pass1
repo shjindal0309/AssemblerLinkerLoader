@@ -1,0 +1,12 @@
+#0           JMP  var1
+#4    var1   JMP  var2
+#8    var2   JMP  var3
+#12   var3   LDA 7
+#14          MOV B, A
+#15          LDA 3
+#18          ANA B
+#19          STA 11
+#22          HLT
+#23   a      DC 4
+#24   b      DC 2
+#25   d      DC 0
